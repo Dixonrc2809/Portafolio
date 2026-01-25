@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dixon Rodríguez Cubero | Portfolio</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Devicons para iconos de tecnologías -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <link rel="stylesheet" href="/css/index.css">
+
+</head>
+
+<body>
+    <!-- Fondo con partículas sutiles -->
+    <div id="particles-bg"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Sobre mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tech">Tecnologías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div id="hero-particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Dixon Rodríguez Cubero</h1>
+                <p class="hero-subtitle">Soy desarrollador Junior Full-Stack, con enfoque en frontend y backend, creando
+                    aplicaciones web modernas, funcionales y bien estructuradas.</p>
+                <div class="hero-buttons d-flex gap-4 justify-content-center">
+                    <a href="#projects" class="btn btn-primary-custom">Ver proyectos</a>
+                    <a href="#contact" class="btn btn-outline-custom">Contactar</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="bi bi-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre mí</h2>
+                <p class="section-subtitle">Apasionado por crear soluciones digitales que combinan estética,
+                    funcionalidad y performance</p>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-md-4 fade-in">
+                    <div class="glass-card text-center">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+                        <h4 class="mb-3">Desarrollo Full-Stack</h4>
+                        <p class="text-light">Especializado en crear aplicaciones web completas, desde arquitecturas
+                            backend robustas hasta interfaces frontend intuitivas y responsivas.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 fade-in">
+                    <div class="glass-card text-center">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-palette"></i>
+                        </div>
+                        <h4 class="mb-3">Diseño UI/UX</h4>
+                        <p class="text-light">Enfoque en experiencias de usuario excepcionales, con interfaces limpias,
+                            modernas y altamente funcionales que resuelven problemas reales.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 fade-in">
+                    <div class="glass-card text-center">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-lightning-charge"></i>
+                        </div>
+                        <h4 class="mb-3">Performance & SEO</h4>
+                        <p class="text-light">Optimización para máxima velocidad, accesibilidad y posicionamiento,
+                            garantizando una experiencia premium en todos los dispositivos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tecnologías Section -->
+    <section id="tech" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tecnologías</h2>
+                <p class="section-subtitle">Tecnologías y herramientas con las que trabajo habitualmente</p>
+            </div>
+
+            <div class="fade-in">
+                <!-- Grid de tecnologías sin cuadros -->
+                <div class="tech-grid">
+                    <!-- JavaScript -->
+                    <div class="tech-item">
+                        <i class="devicon-javascript-plain tech-icon tech-js floating"></i>
+                        <span class="tech-name">JavaScript</span>
+                    </div>
+
+                    <!-- React -->
+                    <div class="tech-item">
+                        <i class="devicon-react-original tech-icon tech-react floating"></i>
+                        <span class="tech-name">React</span>
+                    </div>
+
+                    <!-- Node.js -->
+                    <div class="tech-item">
+                        <i class="devicon-nodejs-plain tech-icon tech-node floating"></i>
+                        <span class="tech-name">Node.js</span>
+                    </div>
+
+                    <!-- .NET -->
+                    <div class="tech-item">
+                        <i class="devicon-dotnetcore-plain tech-icon tech-net floating"></i>
+                        <span class="tech-name">.NET</span>
+                    </div>
+
+                    <!-- HTML5 -->
+                    <div class="tech-item">
+                        <i class="devicon-html5-plain tech-icon tech-html floating"></i>
+                        <span class="tech-name">HTML5</span>
+                    </div>
+
+                    <!-- CSS3 -->
+                    <div class="tech-item">
+                        <i class="devicon-css3-plain tech-icon tech-css floating"></i>
+                        <span class="tech-name">CSS3</span>
+                    </div>
+
+                    <!-- TypeScript -->
+                    <div class="tech-item">
+                        <i class="devicon-typescript-plain tech-icon floating" style="color: #3178c6;"></i>
+                        <span class="tech-name">TypeScript</span>
+                    </div>
+
+                </div>
+
+                <div class="text-center mt-5">
+                    <p class="text-light">Esta lista se expande constantemente con nuevas tecnologías y frameworks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Proyectos Destacados</h2>
+                <p class="section-subtitle">Algunos de mis trabajos más recientes y representativos</p>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="glass-card project-card">
+                        <div class="project-img" style="background-image: url('images/reliabuy.png');">
+                        </div>
+
+                        <h4 class="mb-3">Reliabuy</h4>
+
+                        <p class="text-light">
+                            Plataforma de compras confiables desarrollada con HTML, CSS y JavaScript,
+                            enfocada en la seguridad del usuario, experiencia intuitiva y confianza
+                            en los procesos de compra.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/tuusuario/reliabuy" class="project-link" target="_blank">
+                                <i class="bi bi-github"></i> Código
+                            </a>
+                            <a href="https://dixonrc2809.github.io/reliabuy.github.io/" class="project-link"
+                                target="_blank">
+                                <i class="bi bi-box-arrow-up-right"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="glass-card project-card">
+                        <div class="project-img" style="background-image: url('images/snacktime.png');">
+                        </div>
+
+                        <h4 class="mb-3">SnackTime</h4>
+
+                        <p class="text-light">
+                            Plataforma de pedidos de comida en línea desarrollada con .NET (C#),
+                            JavaScript y CSS. Incluye personalización de pedidos mediante SnackBox,
+                            gestión de productos y una experiencia de usuario moderna e interactiva.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">.NET</span>
+                            <span class="project-tag">C#</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/tuusuario/snacktime" class="project-link" target="_blank">
+                                <i class="bi bi-github"></i> Código
+                            </a>
+                            <a href="https://tudemo.com/snacktime" class="project-link" target="_blank">
+                                <i class="bi bi-box-arrow-up-right"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="glass-card project-card">
+                        <div class="project-img"></div>
+                        <h4 class="mb-3">Mobile Task Manager</h4>
+                        <p class="text-light">Aplicación móvil de gestión de tareas con sincronización en tiempo real,
+                            notificaciones y colaboración en equipo.</p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">React Native</span>
+                            <span class="project-tag">Express</span>
+                            <span class="project-tag">Socket.io</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="bi bi-github"></i> Código
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="bi bi-box-arrow-up-right"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contacto</h2>
+                <p class="section-subtitle">¿Tienes un proyecto en mente? Hablemos sobre cómo puedo ayudarte</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto fade-in">
+                    <div class="glass-card">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="contact-info">
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="bi bi-envelope"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="text-light">Email</h5>
+                                            <p class="text-light">andreyrc28.cr@gmail.com</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="bi bi-geo-alt"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="text-light">Ubicación</h5>
+                                            <p class="text-light">Costa Rica</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="bi bi-telephone"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="text-light">Teléfono</h5>
+                                            <p class="text-light">+506 6145-2358</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="social-links">
+                                        <a href="https://github.com/Dixonrc2809" class="social-link" target="_blank"
+                                            rel="noopener noreferrer">
+                                            <i class="bi bi-github"></i>
+                                        </a>
+
+                                        <a href="https://www.linkedin.com/in/dixon-rodriguez" class="social-link"
+                                            target="_blank" rel="noopener noreferrer">
+                                            <i class="bi bi-linkedin"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <form id="contactForm">
+                                    <div class="mb-4">
+                                        <label for="name" class="form-label text-light">Nombre</label>
+                                        <input type="text" class="form-control bg-transparent border-glass text-light"
+                                            id="name" required style="border-color: var(--glass-border);">
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label for="email" class="form-label text-light">Email</label>
+                                        <input type="email" class="form-control bg-transparent border-glass text-light"
+                                            id="email" required style="border-color: var(--glass-border);">
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label for="message" class="form-label text-light">Mensaje</label>
+                                        <textarea class="form-control bg-transparent border-glass text-light"
+                                            id="message" rows="4" required
+                                            style="border-color: var(--glass-border);"></textarea>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary-custom w-100">Enviar mensaje</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="footer-logo mb-4"
+                        style="font-size: 2.2rem; font-weight: 700; color: var(--text-light); font-family: 'Space Grotesk', sans-serif;">
+                        Portafolio
+                    </div>
+                    <p class="footer-text">Software Engineer especializado en crear experiencias digitales modernas,
+                        funcionales y visualmente impactantes.</p>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
+                    <h5 class="text-light mb-4">Enlaces</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#about">Sobre mí</a></li>
+                        <li><a href="#tech">Tecnologías</a></li>
+                        <li><a href="#projects">Proyectos</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                    <h5 class="text-light mb-4">Servicios</h5>
+                    <ul class="footer-links">
+                        <li>Desarrollo Web</a></li>
+                        <li>Diseño UI/UX</>
+                        </li>
+                        <li>Mantenimiento</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <h5 class="text-light mb-4">Contacto</h5>
+                    <ul class="footer-links">
+                        <li class="text-light">andreyrc28.cr@gmail.com</li>
+                        <li class="text-light">+506 6145-2358</li>
+                        <li class="text-light">Costa Rica</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2026 Dixon Rodríguez Cubero. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Configuración de partículas animadas
+        document.addEventListener('DOMContentLoaded', function () {
+            // Crear partículas para el fondo general
+            const particlesBg = document.getElementById('particles-bg');
+
+            if (particlesBg) {
+                for (let i = 0; i < 80; i++) {
+                    const particle = document.createElement('div');
+                    particle.style.position = 'absolute';
+                    const size = Math.random() * 2 + 1;
+                    particle.style.width = size + 'px';
+                    particle.style.height = size + 'px';
+                    particle.style.background = 'rgba(167, 139, 250, ' + (Math.random() * 0.1 + 0.05) + ')';
+                    particle.style.borderRadius = '50%';
+                    particle.style.top = Math.random() * 100 + '%';
+                    particle.style.left = Math.random() * 100 + '%';
+
+                    // Animación de movimiento suave
+                    const duration = Math.random() * 40 + 30;
+                    const delay = Math.random() * 5;
+                    particle.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+
+                    particlesBg.appendChild(particle);
+                }
+            }
+
+            // Partículas para el hero section (más densas)
+            const heroParticles = document.getElementById('hero-particles');
+
+            if (heroParticles) {
+                for (let i = 0; i < 50; i++) {
+                    const particle = document.createElement('div');
+                    particle.style.position = 'absolute';
+                    const size = Math.random() * 3 + 1;
+                    particle.style.width = size + 'px';
+                    particle.style.height = size + 'px';
+                    particle.style.background = 'rgba(139, 92, 246, ' + (Math.random() * 0.2 + 0.1) + ')';
+                    particle.style.borderRadius = '50%';
+                    particle.style.top = Math.random() * 100 + '%';
+                    particle.style.left = Math.random() * 100 + '%';
+
+                    // Animación de movimiento suave
+                    const duration = Math.random() * 30 + 20;
+                    const delay = Math.random() * 5;
+                    particle.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+
+                    heroParticles.appendChild(particle);
+                }
+            }
+
+            // Animación de scroll para navbar
+            window.addEventListener('scroll', function () {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.style.background = 'rgba(11, 6, 22, 0.95)';
+                    navbar.style.padding = '0.7rem 0';
+                } else {
+                    navbar.style.background = 'rgba(11, 6, 22, 0.85)';
+                    navbar.style.padding = '1rem 0';
+                }
+
+                // Actualizar enlace activo del navbar
+                const sections = document.querySelectorAll('section');
+                const navLinks = document.querySelectorAll('.nav-link');
+
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // Animación de elementos al hacer scroll
+            const fadeElements = document.querySelectorAll('.fade-in');
+
+            const fadeInOnScroll = function () {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 100;
+
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.classList.add('visible');
+                    }
+                });
+            };
+
+            // Ejecutar al cargar y al hacer scroll
+            window.addEventListener('scroll', fadeInOnScroll);
+            fadeInOnScroll();
+
+            // Inicializar EmailJS con tu Public Key
+            emailjs.init("_UlhhMCMCkhBurQHE");
+
+            // Formulario de contacto con EmailJS
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+
+                    // Valida los campos
+                    const name = document.getElementById('name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const message = document.getElementById('message').value.trim();
+
+                    if (!name || !email || !message) {
+                        showAlert('Por favor, completa todos los campos.', 'warning');
+                        return;
+                    }
+
+                    // Valida email
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(email)) {
+                        showAlert('Por favor, ingresa un email válido.', 'warning');
+                        return;
+                    }
+
+                    // Cambia el texto del botón
+                    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span> Enviando...';
+                    submitBtn.disabled = true;
+
+                    // Prepara los datos para el template
+                    const templateParams = {
+                        from_name: name,
+                        from_email: email,
+                        message: message,
+                        reply_to: email,
+                        to_email: 'andreyrc28.cr@gmail.com',
+                        date: new Date().toLocaleString('es-CR', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric',
+                            hour: '2-digit',
+                            minute: '2-digit'
+                        })
+                    };
+
+                    // Envía el email usando EmailJS
+                    emailjs.send("service_i9aegts", "template_51suhhc", templateParams)
+                        .then(function (response) {
+                            console.log('Email enviado con éxito!', response.status, response.text);
+
+                            // Muestra mensaje de éxito
+                            showAlert('¡Mensaje enviado con éxito! Te contactaré pronto.', 'success');
+
+                            // Resetea el formulario
+                            contactForm.reset();
+                        }, function (error) {
+                            console.log('Error al enviar email:', error);
+
+                            // Muestra mensaje de error
+                            showAlert('Hubo un error al enviar el mensaje. Por favor, intenta nuevamente o contáctame directamente a: andreyrc28.cr@gmail.com', 'danger');
+                        })
+                        .finally(function () {
+                            // Restaura el botón
+                            submitBtn.textContent = originalText;
+                            submitBtn.disabled = false;
+                        });
+                });
+            }
+
+            // Smooth scroll para enlaces internos
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+
+                        // Cerrar navbar en móvil
+                        const navbarCollapse = document.querySelector('.navbar-collapse');
+                        if (navbarCollapse.classList.contains('show')) {
+                            const navbarToggler = document.querySelector('.navbar-toggler');
+                            navbarToggler.click();
+                        }
+                    }
+                });
+            });
+        });
+
+        // Función para mostrar alertas personalizadas
+        function showAlert(message, type) {
+            // Remueve alertas anteriores
+            const existingAlert = document.querySelector('.email-alert');
+            if (existingAlert) {
+                existingAlert.remove();
+            }
+
+            // Colores para cada tipo de alerta
+            const typeColors = {
+                success: '#10b981', // verde
+                danger: '#ef4444',  // rojo
+                warning: '#f59e0b', // amarillo
+                info: '#3b82f6'     // azul
+            };
+
+            // Iconos para cada tipo
+            const typeIcons = {
+                success: 'bi-check-circle-fill',
+                danger: 'bi-exclamation-triangle-fill',
+                warning: 'bi-exclamation-circle-fill',
+                info: 'bi-info-circle-fill'
+            };
+
+            // Crea el elemento de alerta
+            const alertDiv = document.createElement('div');
+            alertDiv.className = 'email-alert';
+            alertDiv.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 9999;
+        min-width: 300px;
+        max-width: 400px;
+        background: rgba(11, 6, 22, 0.95);
+        border-left: 4px solid ${typeColors[type]};
+        border-radius: 8px;
+        padding: 1rem 1.5rem;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        color: white;
+        transform: translateX(120%);
+        transition: transform 0.3s ease-out;
+    `;
+
+            alertDiv.innerHTML = `
+        <div class="d-flex align-items-start">
+            <i class="bi ${typeIcons[type]} me-3" style="color: ${typeColors[type]}; font-size: 1.25rem; margin-top: 2px;"></i>
+            <div class="flex-grow-1">
+                <div class="mb-1" style="font-weight: 600; color: ${typeColors[type]}">${type === 'success' ? '¡Éxito!' :
+                    type === 'danger' ? 'Error' :
+                        type === 'warning' ? 'Advertencia' : 'Información'
+                }</div>
+                <div style="font-size: 0.9rem;">${message}</div>
+            </div>
+            <button type="button" class="btn-close btn-close-white ms-2" style="filter: brightness(0) invert(1);"></button>
+        </div>
+    `;
+
+            // Agrega la alerta al body
+            document.body.appendChild(alertDiv);
+
+            // Animación de entrada
+            setTimeout(() => {
+                alertDiv.style.transform = 'translateX(0)';
+            }, 10);
+
+            // Configura el botón de cerrar
+            const closeBtn = alertDiv.querySelector('.btn-close');
+            closeBtn.addEventListener('click', function () {
+                alertDiv.style.transform = 'translateX(120%)';
+                setTimeout(() => {
+                    if (alertDiv.parentNode) {
+                        alertDiv.remove();
+                    }
+                }, 300);
+            });
+
+            // Remueve automáticamente después de 5 segundos
+            setTimeout(() => {
+                if (alertDiv.parentNode) {
+                    alertDiv.style.transform = 'translateX(120%)';
+                    setTimeout(() => {
+                        if (alertDiv.parentNode) {
+                            alertDiv.remove();
+                        }
+                    }, 300);
+                }
+            }, 5000);
+        }
+    </script>
+</body>
+
+</html>
