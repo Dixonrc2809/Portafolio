@@ -124,67 +124,97 @@
         </div>
     </section>
 
-    <!-- Tecnologías Section -->
-    <section id="tech" class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Tecnologías</h2>
-                <p class="section-subtitle">Tecnologías y herramientas con las que trabajo habitualmente</p>
+<!-- Tecnologías Section -->
+<section id="tech" class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Tecnologías</h2>
+            <p class="section-subtitle">Tecnologías y herramientas con las que trabajo habitualmente</p>
+        </div>
+
+        <div class="fade-in">
+            <!-- Grid de tecnologías -->
+            <div class="tech-grid">
+                <!-- JavaScript -->
+                <div class="tech-item">
+                    <i class="devicon-javascript-plain tech-icon tech-js floating"></i>
+                    <span class="tech-name">JavaScript</span>
+                </div>
+
+                <!-- React -->
+                <div class="tech-item">
+                    <i class="devicon-react-original tech-icon tech-react floating"></i>
+                    <span class="tech-name">React</span>
+                </div>
+
+                <!-- Node.js -->
+                <div class="tech-item">
+                    <i class="devicon-nodejs-plain tech-icon tech-node floating"></i>
+                    <span class="tech-name">Node.js</span>
+                </div>
+
+                <!-- .NET -->
+                <div class="tech-item">
+                    <i class="devicon-dotnetcore-plain tech-icon tech-net floating"></i>
+                    <span class="tech-name">.NET</span>
+                </div>
+
+                <!-- HTML5 -->
+                <div class="tech-item">
+                    <i class="devicon-html5-plain tech-icon tech-html floating"></i>
+                    <span class="tech-name">HTML5</span>
+                </div>
+
+                <!-- CSS3 -->
+                <div class="tech-item">
+                    <i class="devicon-css3-plain tech-icon tech-css floating"></i>
+                    <span class="tech-name">CSS3</span>
+                </div>
+
+                <!-- TypeScript -->
+                <div class="tech-item">
+                    <i class="devicon-typescript-plain tech-icon tech-ts floating"></i>
+                    <span class="tech-name">TypeScript</span>
+                </div>
+
+                <!-- MySQL -->
+                <div class="tech-item">
+                    <i class="devicon-mysql-plain tech-icon tech-mysql floating"></i>
+                    <span class="tech-name">MySQL</span>
+                </div>
+
+                <!-- SQL Server -->
+                <div class="tech-item">
+                    <i class="devicon-microsoftsqlserver-plain tech-icon tech-sql floating"></i>
+                    <span class="tech-name">SQL Server</span>
+                </div>
+
+                <!-- C# -->
+                <div class="tech-item">
+                    <i class="devicon-csharp-plain tech-icon tech-csharp floating"></i>
+                    <span class="tech-name">C#</span>
+                </div>
+
+                <!-- PHP -->
+                <div class="tech-item">
+                    <i class="devicon-php-plain tech-icon tech-php floating"></i>
+                    <span class="tech-name">PHP</span>
+                </div>
+
+                <!-- Photoshop -->
+                <div class="tech-item">
+                    <i class="devicon-photoshop-plain tech-icon tech-ps floating"></i>
+                    <span class="tech-name">Photoshop</span>
+                </div>
             </div>
 
-            <div class="fade-in">
-                <!-- Grid de tecnologías sin cuadros -->
-                <div class="tech-grid">
-                    <!-- JavaScript -->
-                    <div class="tech-item">
-                        <i class="devicon-javascript-plain tech-icon tech-js floating"></i>
-                        <span class="tech-name">JavaScript</span>
-                    </div>
-
-                    <!-- React -->
-                    <div class="tech-item">
-                        <i class="devicon-react-original tech-icon tech-react floating"></i>
-                        <span class="tech-name">React</span>
-                    </div>
-
-                    <!-- Node.js -->
-                    <div class="tech-item">
-                        <i class="devicon-nodejs-plain tech-icon tech-node floating"></i>
-                        <span class="tech-name">Node.js</span>
-                    </div>
-
-                    <!-- .NET -->
-                    <div class="tech-item">
-                        <i class="devicon-dotnetcore-plain tech-icon tech-net floating"></i>
-                        <span class="tech-name">.NET</span>
-                    </div>
-
-                    <!-- HTML5 -->
-                    <div class="tech-item">
-                        <i class="devicon-html5-plain tech-icon tech-html floating"></i>
-                        <span class="tech-name">HTML5</span>
-                    </div>
-
-                    <!-- CSS3 -->
-                    <div class="tech-item">
-                        <i class="devicon-css3-plain tech-icon tech-css floating"></i>
-                        <span class="tech-name">CSS3</span>
-                    </div>
-
-                    <!-- TypeScript -->
-                    <div class="tech-item">
-                        <i class="devicon-typescript-plain tech-icon floating" style="color: #3178c6;"></i>
-                        <span class="tech-name">TypeScript</span>
-                    </div>
-
-                </div>
-
-                <div class="text-center mt-5">
-                    <p class="text-light">Esta lista se expande constantemente con nuevas tecnologías y frameworks</p>
-                </div>
+            <div class="text-center mt-5">
+                <p class="text-light">Esta lista se expande constantemente con nuevas tecnologías y frameworks</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Projects Section -->
     <section id="projects" class="section">
@@ -427,6 +457,9 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <canvas id="particles-canvas" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:-1;"></canvas>
+
+    <script src="/js/particulas.js"></script>
 
     <script>
         // Configuración de partículas animadas
@@ -530,7 +563,7 @@
             fadeInOnScroll();
 
             // Inicializar EmailJS con tu Public Key
-            emailjs.init("_UlhhMCMCkhBurQHE");
+            emailjs.init("JSCeNBUhislzawYxv");
 
             // Formulario de contacto con EmailJS
             const contactForm = document.getElementById('contactForm');
@@ -579,7 +612,7 @@
                     };
 
                     // Envía el email usando EmailJS
-                    emailjs.send("service_i9aegts", "template_51suhhc", templateParams)
+                    emailjs.send("service_2bueat5", "template_f81erfp", templateParams)
                         .then(function (response) {
                             console.log('Email enviado con éxito!', response.status, response.text);
 
@@ -721,6 +754,4 @@
     </script>
 </body>
 
-
 </html>
-
