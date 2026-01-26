@@ -46,10 +46,10 @@
         }
 
         /* ===== FONDO CON PARTÍCULAS ANIMADAS ===== */
-        #particles-bg {
+        #particles-canvas {
             position: fixed;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             top: 0;
             left: 0;
             z-index: -1;
@@ -334,29 +334,21 @@
         }
 
         /* Colores específicos para cada tecnología */
-        .tech-js {
-            color: #f7df1e;
-        }
+        .tech-js { color: #f7df1e; }
+        .tech-react { color: #61dafb; }
+        .tech-node { color: #339933; }
+        .tech-net { color: #512bd4; }
+        .tech-html { color: #e34f26; }
+        .tech-css { color: #1572b6; }
+        .tech-ts { color: #3178c6; }
 
-        .tech-react {
-            color: #61dafb;
-        }
+        /* Nuevas tecnologías */
+        .tech-mysql { color: #4479A1; }
+        .tech-sql { color: #CC2927; }
+        .tech-csharp { color: #239120; } 
+        .tech-php { color: #777BB4; }
+        .tech-ps { color: #31A8FF; }
 
-        .tech-node {
-            color: #339933;
-        }
-
-        .tech-net {
-            color: #512bd4;
-        }
-
-        .tech-html {
-            color: #e34f26;
-        }
-
-        .tech-css {
-            color: #1572b6;
-        }
 
         /* ===== PROJECTS SECTION ===== */
 
@@ -381,14 +373,6 @@
             position: relative;
             overflow: hidden;
         }
-
-        /* 🔥 QUITAMOS COMPLETAMENTE EL OVERLAY MORADO */
-        /* ELIMINA o comenta este bloque si aún lo tienes */
-        /*
-.project-img::after {
-    content: '';
-}
-*/
 
         /* TAGS */
         .project-tags {
