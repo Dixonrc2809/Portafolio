@@ -37,6 +37,8 @@ section:not(:has(.glass-card:hover)) .visible-glow {
         0 0 120px rgba(139, 92, 246, 0.08) !important;
 }
 
+
+
 /* Cuando está sobre elementos importantes - reducir */
 .glass-card:hover ~ .visible-glow,
 .project-card:hover ~ .visible-glow,

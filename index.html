@@ -57,7 +57,6 @@
                         <a class="nav-link" href="#contact">Contacto</a>
                     </li>
 
-                    <!-- En el navbar, dentro del <div class="collapse navbar-collapse" id="navbarNav"> -->
                     <div class="theme-toggle-wrapper ms-3">
                         <button id="theme-toggle" class="theme-toggle-btn">
                             <span class="theme-icon">
@@ -66,7 +65,7 @@
                             <span class="theme-label">Modo Oscuro</span>
                         </button>
                     </div>
-                    
+
                 </ul>
             </div>
         </div>
@@ -473,14 +472,13 @@
     <canvas id="particles-canvas"
         style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:-1;"></canvas>
 
-    <script src="js/particulas.js"></script>
-    <script src="js/cursor-effect.js"></script>
-    <script src="js/theme-toggle.js"></script>
+    <script src="/js/particulas.js"></script>
 
+    <script src="/js/cursor-effect.js"></script>
+
+    <script src="/js/theme-toggle.js"></script>
 
     <script>
-
-
         // Configuración de partículas animadas
         document.addEventListener('DOMContentLoaded', function () {
             // Crear partículas para el fondo general
@@ -530,6 +528,33 @@
                     heroParticles.appendChild(particle);
                 }
             }
+
+            // Botón para volver arriba
+            const backToTopBtn = document.getElementById('back-to-top');
+
+            // Función para mostrar/ocultar el botón
+            function toggleBackToTopButton() {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.add('show');
+                } else {
+                    backToTopBtn.classList.remove('show');
+                }
+            }
+
+            // Función para volver al inicio
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+
+            // Event listeners
+            window.addEventListener('scroll', toggleBackToTopButton);
+            backToTopBtn.addEventListener('click', scrollToTop);
+
+            // Ejecutar al cargar la página
+            toggleBackToTopButton();
 
             // Animación de scroll para navbar
             window.addEventListener('scroll', function () {
@@ -771,7 +796,12 @@
             }, 5000);
         }
     </script>
-</body>
 
+    <!-- Botón para volver arriba -->
+    <button id="back-to-top" class="back-to-top-btn">
+        <i class="bi bi-chevron-up"></i>
+    </button>
+
+</body>
 
 </html>
