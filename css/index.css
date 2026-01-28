@@ -316,6 +316,144 @@ h6 {
     color: #334155;
 }
 
+/* ===== ESTILOS PARA IMAGEN DE PERFIL ===== */
+
+/* Contenedor principal de la imagen */
+.profile-image-wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 40px auto;
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Imagen de perfil */
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    background: linear-gradient(var(--bg-color), var(--bg-color)) padding-box,
+                linear-gradient(135deg, var(--primary), var(--secondary), var(--accent)) border-box;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2),
+                0 0 50px rgba(59, 130, 246, 0.1);
+    position: relative;
+    z-index: 2;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] .profile-image {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3),
+                0 0 50px rgba(139, 92, 246, 0.15);
+}
+
+/* Efecto de brillo/anillo alrededor */
+.profile-image-glow {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, 
+                rgba(59, 130, 246, 0.3), 
+                rgba(96, 165, 250, 0.2), 
+                rgba(147, 197, 253, 0.1));
+    filter: blur(15px);
+    opacity: 0.7;
+    z-index: 1;
+    animation: glowPulse 4s ease-in-out infinite;
+}
+
+[data-theme="dark"] .profile-image-glow {
+    background: linear-gradient(135deg, 
+                rgba(139, 92, 246, 0.4), 
+                rgba(167, 139, 250, 0.3), 
+                rgba(196, 181, 253, 0.2));
+}
+
+/* Efecto hover */
+.profile-image-wrapper:hover .profile-image {
+    transform: scale(1.05);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25),
+                0 0 70px rgba(59, 130, 246, 0.2);
+}
+
+[data-theme="dark"] .profile-image-wrapper:hover .profile-image {
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4),
+                0 0 70px rgba(139, 92, 246, 0.25);
+}
+
+.profile-image-wrapper:hover .profile-image-glow {
+    opacity: 1;
+    filter: blur(20px);
+}
+
+/* Animación de pulso para el brillo */
+@keyframes glowPulse {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(0.95);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+/* Ajustar animación de flotación para la imagen */
+.profile-image-wrapper {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Responsive para imagen de perfil */
+@media (max-width: 768px) {
+    .profile-image-wrapper {
+        width: 170px;
+        height: 170px;
+        margin: 0 auto 30px auto;
+    }
+    
+    .profile-image {
+        border-width: 3px;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-image-wrapper {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 25px auto;
+    }
+    
+    .profile-image-glow {
+        top: -8px;
+        left: -8px;
+        right: -8px;
+        bottom: -8px;
+    }
+}
+
+/* Ajuste para la animación fade-in del contenido */
+.hero-content .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s forwards 0.3s;
+}
+
+.hero-title {
+    animation-delay: 0.5s !important;
+}
+
+.hero-subtitle {
+    animation-delay: 0.7s !important;
+}
+
+.hero-buttons {
+    animation-delay: 0.9s !important;
+}
+
 /* BOTONES OPTIMIZADOS - Manteniendo colores */
 .btn-primary-custom {
     background: linear-gradient(135deg, var(--primary), var(--primary-dark));
