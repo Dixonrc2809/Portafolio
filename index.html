@@ -25,7 +25,7 @@
 
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/cursor-effect.css">
-
+    <link rel="stylesheet" href="./css/floating-button.css">
 
 </head>
 
@@ -42,19 +42,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#home">Inicio</a>
+                        <a class="nav-link active" href="#home" data-i18n="nav.home">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">Sobre mí</a>
+                        <a class="nav-link" href="#about" data-i18n="nav.about">Sobre mí</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#tech">Tecnologías</a>
+                        <a class="nav-link" href="#tech" data-i18n="nav.tech">Tecnologías</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Proyectos</a>
+                        <a class="nav-link" href="#projects" data-i18n="nav.projects">Proyectos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contacto</a>
+                        <a class="nav-link" href="#contact" data-i18n="nav.contact">Contacto</a>
                     </li>
 
                     <div class="theme-toggle-wrapper ms-3">
@@ -62,7 +62,7 @@
                             <span class="theme-icon">
                                 <i class="bi bi-moon-fill"></i>
                             </span>
-                            <span class="theme-label">Modo Oscuro</span>
+                            <span class="theme-label" data-i18n="theme.dark">Modo Oscuro</span>
                         </button>
                     </div>
 
@@ -71,40 +71,41 @@
         </div>
     </nav>
 
+        <!-- Botón flotante de idioma -->
+    <button id="language-toggle-floating" onclick="toggleLanguage()">
+        <span class="lang-text">ES</span>
+    </button>
+
     <!-- Hero Section -->
-<!-- Hero Section -->
-<section id="home" class="hero-section">
-    <div id="hero-particles"></div>
-    <div class="container">
-        <div class="hero-content">
-            <!-- Imagen de perfil agregada aquí -->
-            <div class="profile-image-wrapper fade-in">
-                <img src="images/foto-perfil.jpg" alt="Dixon Rodríguez Cubero" 
-                     class="profile-image">
-                <div class="profile-image-glow"></div>
-            </div>
-            
-            <h1 class="hero-title">Dixon Rodríguez Cubero</h1>
-            <p class="hero-subtitle">Soy desarrollador Junior Full-Stack, con enfoque en frontend y backend, creando
-                aplicaciones web modernas, funcionales y bien estructuradas.</p>
-            <div class="hero-buttons d-flex gap-4 justify-content-center">
-                <a href="#projects" class="btn btn-primary-custom">Ver proyectos</a>
-                <a href="#contact" class="btn btn-outline-custom">Contactar</a>
+    <section id="home" class="hero-section">
+        <div id="hero-particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <!-- Imagen de perfil-->
+                <div class="profile-image-wrapper fade-in">
+                    <img src="images/foto-perfil.jpg" alt="Dixon Rodríguez Cubero" class="profile-image">
+                    <div class="profile-image-glow"></div>
+                </div>
+
+                <h1 class="hero-title" data-i18n="hero.title">Dixon Rodríguez Cubero</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Soy desarrollador Junior Full-Stack, con enfoque en frontend y backend, creando aplicaciones web modernas, funcionales y bien estructuradas.</p>
+                <div class="hero-buttons d-flex gap-4 justify-content-center">
+                    <a href="#projects" class="btn btn-primary-custom" data-i18n="hero.cta.projects">Ver proyectos</a>
+                    <a href="#contact" class="btn btn-outline-custom" data-i18n="hero.cta.contact">Contactar</a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="scroll-indicator">
-        <i class="bi bi-chevron-down"></i>
-    </div>
-</section>
+        <div class="scroll-indicator">
+            <i class="bi bi-chevron-down"></i>
+        </div>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
             <div class="section-title">
-                <h2>Sobre mí</h2>
-                <p class="section-subtitle">Apasionado por crear soluciones digitales que combinan estética,
-                    funcionalidad y performance</p>
+                <h2 data-i18n="about.title">Sobre mí</h2>
+                <p class="section-subtitle" data-i18n="about.subtitle">Apasionado por crear soluciones digitales que combinan estética, funcionalidad y performance</p>
             </div>
 
             <div class="row g-5">
@@ -113,9 +114,8 @@
                         <div class="icon-wrapper">
                             <i class="bi bi-code-slash"></i>
                         </div>
-                        <h4 class="mb-3">Desarrollo Full-Stack</h4>
-                        <p class="text-light">Especializado en crear aplicaciones web completas, desde arquitecturas
-                            backend robustas hasta interfaces frontend intuitivas y responsivas.</p>
+                        <h4 class="mb-3" data-i18n="about.card1.title">Desarrollo Full-Stack</h4>
+                        <p class="text-light" data-i18n="about.card1.text">Especializado en crear aplicaciones web completas, desde arquitecturas backend robustas hasta interfaces frontend intuitivas y responsivas.</p>
                     </div>
                 </div>
 
@@ -124,9 +124,8 @@
                         <div class="icon-wrapper">
                             <i class="bi bi-palette"></i>
                         </div>
-                        <h4 class="mb-3">Diseño UI/UX</h4>
-                        <p class="text-light">Enfoque en experiencias de usuario excepcionales, con interfaces limpias,
-                            modernas y altamente funcionales que resuelven problemas reales.</p>
+                        <h4 class="mb-3" data-i18n="about.card2.title">Diseño UI/UX</h4>
+                        <p class="text-light" data-i18n="about.card2.text">Enfoque en experiencias de usuario excepcionales, con interfaces limpias, modernas y altamente funcionales que resuelven problemas reales.</p>
                     </div>
                 </div>
 
@@ -135,9 +134,8 @@
                         <div class="icon-wrapper">
                             <i class="bi bi-lightning-charge"></i>
                         </div>
-                        <h4 class="mb-3">Performance & SEO</h4>
-                        <p class="text-light">Optimización para máxima velocidad, accesibilidad y posicionamiento,
-                            garantizando una experiencia premium en todos los dispositivos.</p>
+                        <h4 class="mb-3" data-i18n="about.card3.title">Performance & SEO</h4>
+                        <p class="text-light" data-i18n="about.card3.text">Optimización para máxima velocidad, accesibilidad y posicionamiento, garantizando una experiencia premium en todos los dispositivos.</p>
                     </div>
                 </div>
             </div>
@@ -148,8 +146,8 @@
     <section id="tech" class="section">
         <div class="container">
             <div class="section-title">
-                <h2>Tecnologías</h2>
-                <p class="section-subtitle">Tecnologías y herramientas con las que trabajo habitualmente</p>
+                <h2 data-i18n="tech.title">Tecnologías</h2>
+                <p class="section-subtitle" data-i18n="tech.subtitle">Tecnologías y herramientas con las que trabajo habitualmente</p>
             </div>
 
             <div class="fade-in">
@@ -236,155 +234,158 @@
                 </div>
 
                 <div class="text-center mt-5">
-                    <p class="text-light">Esta lista se expande constantemente con nuevas tecnologías y frameworks</p>
+                    <p class="text-light" data-i18n="tech.expanding">Esta lista se expande constantemente con nuevas tecnologías y frameworks</p>
                 </div>
             </div>
         </div>
     </section>
 
 
-<!-- Projects Section -->
-<section id="projects" class="projects-section">
-    <div class="container">
-        <div class="section-title">
-            <h2>Proyectos Destacados</h2>
-            <p class="section-subtitle">Algunos de mis trabajos más recientes y representativos</p>
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="projects.title">Proyectos Destacados</h2>
+                <p class="section-subtitle" data-i18n="projects.subtitle">Algunos de mis trabajos más recientes y representativos</p>
+            </div>
+
+            <div class="row g-5">
+
+                <!-- Suportive -->
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="glass-card project-card">
+                        <div class="project-img" style="background-image: url('images/supportive.png');"></div>
+
+                        <h4 class="mb-3" data-i18n="project.suportive.title">Suportive</h4>
+                        <span class="project-date" data-i18n="project.date.sep_dec">Sep 2025 – Dec 2025</span>
+
+                        <p class="text-light" data-i18n="project.suportive.description">
+                            Sistema de gestión de tickets desarrollado con Angular, enfocado en
+                            la creación, seguimiento y administración de solicitudes de soporte,
+                            con una interfaz clara y orientada a la eficiencia del usuario.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">Angular</span>
+                            <span class="project-tag">TypeScript</span>
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="bi bi-box-arrow-up-right"></i> <span data-i18n="project.demo">Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SnackTime -->
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="glass-card project-card">
+                        <div class="project-img" style="background-image: url('images/snacktime.png');"></div>
+
+                        <h4 class="mb-3" data-i18n="project.snacktime.title">SnackTime</h4>
+                        <span class="project-date" data-i18n="project.date.may_sep">May 2025 – Sept 2025</span>
+
+                        <p class="text-light" data-i18n="project.snacktime.description">
+                            Plataforma de pedidos de comida en línea desarrollada con .NET (C#),
+                            JavaScript y CSS, que incluye gestión de productos, personalización mediante
+                            SnackBox y una experiencia de usuario moderna.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">.NET</span>
+                            <span class="project-tag">C#</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">CSHTML</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://codecanyon.net/item/snacktime-online-food-ordering-system/61377253"
+                                class="project-link" target="_blank">
+                                <i class="bi bi-shop-window"></i> <span data-i18n="project.get">Obtener</span>
+                            </a>
+
+                            <a href="http://snacktime.runasp.net/" class="project-link" target="_blank">
+                                <i class="bi bi-box-arrow-up-right"></i> <span data-i18n="project.demo">Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reliabuy -->
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="glass-card project-card">
+                        <div class="project-img" style="background-image: url('images/reliabuy.png');"></div>
+
+                        <h4 class="mb-3" data-i18n="project.reliabuy.title">Reliabuy</h4>
+                        <span class="project-date" data-i18n="project.date.nov_dec">Nov 2024 – Dic 2024</span>
+
+                        <p class="text-light" data-i18n="project.reliabuy.description">
+                            Plataforma de compras confiables desarrollada con HTML, CSS y JavaScript,
+                            enfocada en la seguridad del usuario, experiencia intuitiva y claridad en
+                            los procesos de compra en línea y simulación de pago.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">JSON</span>
+                            <span class="project-tag">Responsive Design</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://dixonrc2809.github.io/reliabuy.github.io/" class="project-link"
+                                target="_blank">
+                                <i class="bi bi-box-arrow-up-right"></i> <span data-i18n="project.demo">Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FitPlus -->
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="glass-card project-card">
+                        <div class="project-img" style="background-image: url('images/fitplus.png');"></div>
+
+                        <h4 class="mb-3" data-i18n="project.fitplus.title">FitPlus Training Center</h4>
+                        <span class="project-date" data-i18n="project.date.sep_oct">Sep 2024 – Oct 2024</span>
+
+                        <p class="text-light" data-i18n="project.fitplus.description">
+                            Página web informativa para un centro de entrenamiento físico, desarrollada
+                            con HTML, CSS y JavaScript, enfocada en mostrar servicios, planes, contacto
+                            y una experiencia visual moderna.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://dixonrc2809.github.io/Fitplus.github.io/" class="project-link"
+                                target="_blank">
+                                <i class="bi bi-box-arrow-up-right"></i> <span data-i18n="project.demo">Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-
-        <div class="row g-5">
-
-            <!-- Suportive -->
-            <div class="col-md-6 col-lg-4 fade-in">
-                <div class="glass-card project-card">
-                    <div class="project-img" style="background-image: url('images/supportive.png');"></div>
-
-                    <h4 class="mb-3">Suportive</h4>
-                    <span class="project-date">Sep 2025 – Dec 2025</span>
-
-                    <p class="text-light">
-                        Sistema de gestión de tickets desarrollado con Angular, enfocado en
-                        la creación, seguimiento y administración de solicitudes de soporte,
-                        con una interfaz clara y orientada a la eficiencia del usuario.
-                    </p>
-
-                    <div class="project-tags">
-                        <span class="project-tag">Angular</span>
-                        <span class="project-tag">TypeScript</span>
-                        <span class="project-tag">HTML</span>
-                        <span class="project-tag">CSS</span>
-                    </div>
-
-                    <div class="project-links">
-                        <a href="#" class="project-link">
-                            <i class="bi bi-box-arrow-up-right"></i> Demo
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SnackTime -->
-            <div class="col-md-6 col-lg-4 fade-in">
-                <div class="glass-card project-card">
-                    <div class="project-img" style="background-image: url('images/snacktime.png');"></div>
-
-                    <h4 class="mb-3">SnackTime</h4>
-                    <span class="project-date">May 2025 – Sept 2025</span>
-
-                    <p class="text-light">
-                        Plataforma de pedidos de comida en línea desarrollada con .NET (C#),
-                        JavaScript y CSS, que incluye gestión de productos, personalización mediante
-                        SnackBox y una experiencia de usuario moderna.
-                    </p>
-
-                    <div class="project-tags">
-                        <span class="project-tag">.NET</span>
-                        <span class="project-tag">C#</span>
-                        <span class="project-tag">JavaScript</span>
-                        <span class="project-tag">CSHTML</span>
-                        <span class="project-tag">CSS</span>
-                    </div>
-
-                    <div class="project-links">
-                        <a href="https://codecanyon.net/item/snacktime-online-food-ordering-system/61377253" class="project-link" target="_blank">
-                            <i class="bi bi-shop-window"></i> Obtener
-                        </a>
-
-                        <a href="http://snacktime.runasp.net/" class="project-link" target="_blank">
-                            <i class="bi bi-box-arrow-up-right"></i> Demo
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Reliabuy -->
-            <div class="col-md-6 col-lg-4 fade-in">
-                <div class="glass-card project-card">
-                    <div class="project-img" style="background-image: url('images/reliabuy.png');"></div>
-
-                    <h4 class="mb-3">Reliabuy</h4>
-                    <span class="project-date">Nov 2024 – Dic 2024</span>
-
-                    <p class="text-light">
-                        Plataforma de compras confiables desarrollada con HTML, CSS y JavaScript,
-                        enfocada en la seguridad del usuario, experiencia intuitiva y claridad en
-                        los procesos de compra en línea y simulación de pago.
-                    </p>
-
-                    <div class="project-tags">
-                        <span class="project-tag">HTML</span>
-                        <span class="project-tag">CSS</span>
-                        <span class="project-tag">JavaScript</span>
-                        <span class="project-tag">JSON</span>
-                        <span class="project-tag">Responsive Design</span>
-                    </div>
-
-                    <div class="project-links">
-                        <a href="https://dixonrc2809.github.io/reliabuy.github.io/" class="project-link" target="_blank">
-                            <i class="bi bi-box-arrow-up-right"></i> Demo
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FitPlus -->
-            <div class="col-md-6 col-lg-4 fade-in">
-                <div class="glass-card project-card">
-                    <div class="project-img" style="background-image: url('images/fitplus.png');"></div>
-
-                    <h4 class="mb-3">FitPlus Training Center</h4>
-                    <span class="project-date">Sep 2024 – Oct 2024</span>
-
-                    <p class="text-light">
-                        Página web informativa para un centro de entrenamiento físico, desarrollada
-                        con HTML, CSS y JavaScript, enfocada en mostrar servicios, planes, contacto
-                        y una experiencia visual moderna.
-                    </p>
-
-                    <div class="project-tags">
-                        <span class="project-tag">HTML</span>
-                        <span class="project-tag">CSS</span>
-                        <span class="project-tag">JavaScript</span>
-                    </div>
-
-                    <div class="project-links">
-                        <a href="https://dixonrc2809.github.io/Fitplus.github.io/" class="project-link" target="_blank">
-                            <i class="bi bi-box-arrow-up-right"></i> Demo
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
+    </section>
 
 
     <!-- Contact Section -->
     <section id="contact" class="section">
         <div class="container">
             <div class="section-title">
-                <h2>Contacto</h2>
-                <p class="section-subtitle">¿Tienes un proyecto en mente? Hablemos sobre cómo puedo ayudarte</p>
+                <h2 data-i18n="contact.title">Contacto</h2>
+                <p class="section-subtitle" data-i18n="contact.subtitle">¿Tienes un proyecto en mente? Hablemos sobre cómo puedo ayudarte</p>
             </div>
 
             <div class="row">
@@ -398,7 +399,7 @@
                                             <i class="bi bi-envelope"></i>
                                         </div>
                                         <div>
-                                            <h5 class="text-light">Email</h5>
+                                            <h5 class="text-light" data-i18n="contact.email">Email</h5>
                                             <p class="text-light">andreyrc28.cr@gmail.com</p>
                                         </div>
                                     </div>
@@ -408,8 +409,8 @@
                                             <i class="bi bi-geo-alt"></i>
                                         </div>
                                         <div>
-                                            <h5 class="text-light">Ubicación</h5>
-                                            <p class="text-light">Costa Rica</p>
+                                            <h5 class="text-light" data-i18n="contact.location">Ubicación</h5>
+                                            <p class="text-light" data-i18n="contact.location.cr">Costa Rica</p>
                                         </div>
                                     </div>
 
@@ -418,7 +419,7 @@
                                             <i class="bi bi-telephone"></i>
                                         </div>
                                         <div>
-                                            <h5 class="text-light">Teléfono</h5>
+                                            <h5 class="text-light" data-i18n="contact.phone">Teléfono</h5>
                                             <p class="text-light">+506 6145-2358</p>
                                         </div>
                                     </div>
@@ -441,25 +442,28 @@
                             <div class="col-md-6">
                                 <form id="contactForm">
                                     <div class="mb-4">
-                                        <label for="name" class="form-label text-light">Nombre</label>
+                                        <label for="name" class="form-label text-light" data-i18n="contact.form.name">Nombre</label>
                                         <input type="text" class="form-control bg-transparent border-glass text-light"
-                                            id="name" required style="border-color: var(--glass-border);">
+                                            id="name" required style="border-color: var(--glass-border);" 
+                                            data-i18n-placeholder="contact.form.name" placeholder="Nombre">
                                     </div>
 
                                     <div class="mb-4">
-                                        <label for="email" class="form-label text-light">Email</label>
+                                        <label for="email" class="form-label text-light" data-i18n="contact.form.email">Email</label>
                                         <input type="email" class="form-control bg-transparent border-glass text-light"
-                                            id="email" required style="border-color: var(--glass-border);">
+                                            id="email" required style="border-color: var(--glass-border);"
+                                            data-i18n-placeholder="contact.form.email" placeholder="Email">
                                     </div>
 
                                     <div class="mb-4">
-                                        <label for="message" class="form-label text-light">Mensaje</label>
+                                        <label for="message" class="form-label text-light" data-i18n="contact.form.message">Mensaje</label>
                                         <textarea class="form-control bg-transparent border-glass text-light"
                                             id="message" rows="4" required
-                                            style="border-color: var(--glass-border);"></textarea>
+                                            style="border-color: var(--glass-border);"
+                                            data-i18n-placeholder="contact.form.message" placeholder="Mensaje"></textarea>
                                     </div>
 
-                                    <button type="submit" class="btn btn-primary-custom w-100">Enviar mensaje</button>
+                                    <button type="submit" class="btn btn-primary-custom w-100" data-i18n="contact.form.button">Enviar mensaje</button>
                                 </form>
                             </div>
                         </div>
@@ -475,45 +479,45 @@
             <div class="row">
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <div class="footer-logo mb-4"
-                        style="font-size: 2.2rem; font-weight: 700; color: var(--text-light); font-family: 'Space Grotesk', sans-serif;">
+                        style="font-size: 2.2rem; font-weight: 700; color: var(--text-light); font-family: 'Space Grotesk', sans-serif;"
+                        data-i18n="footer.logo">
                         Portafolio
                     </div>
-                    <p class="footer-text">Software Engineer especializado en crear experiencias digitales modernas,
+                    <p class="footer-text" data-i18n="footer.description">Software Engineer especializado en crear experiencias digitales modernas,
                         funcionales y visualmente impactantes.</p>
                 </div>
 
                 <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
-                    <h5 class="text-light mb-4">Enlaces</h5>
+                    <h5 class="text-light mb-4" data-i18n="footer.links">Enlaces</h5>
                     <ul class="footer-links">
-                        <li><a href="#home">Inicio</a></li>
-                        <li><a href="#about">Sobre mí</a></li>
-                        <li><a href="#tech">Tecnologías</a></li>
-                        <li><a href="#projects">Proyectos</a></li>
+                        <li><a href="#home" data-i18n="nav.home">Inicio</a></li>
+                        <li><a href="#about" data-i18n="nav.about">Sobre mí</a></li>
+                        <li><a href="#tech" data-i18n="nav.tech">Tecnologías</a></li>
+                        <li><a href="#projects" data-i18n="nav.projects">Proyectos</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-                    <h5 class="text-light mb-4">Servicios</h5>
+                    <h5 class="text-light mb-4" data-i18n="footer.services">Servicios</h5>
                     <ul class="footer-links">
-                        <li>Desarrollo Web</a></li>
-                        <li>Diseño UI/UX</>
-                        </li>
-                        <li>Mantenimiento</a></li>
+                        <li data-i18n="footer.services.web">Desarrollo Web</li>
+                        <li data-i18n="footer.services.uiux">Diseño UI/UX</li>
+                        <li data-i18n="footer.services.maintenance">Mantenimiento</li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3">
-                    <h5 class="text-light mb-4">Contacto</h5>
+                    <h5 class="text-light mb-4" data-i18n="contact.title">Contacto</h5>
                     <ul class="footer-links">
                         <li class="text-light">andreyrc28.cr@gmail.com</li>
                         <li class="text-light">+506 6145-2358</li>
-                        <li class="text-light">Costa Rica</li>
+                        <li class="text-light" data-i18n="contact.location.cr">Costa Rica</li>
                     </ul>
                 </div>
             </div>
 
             <div class="copyright">
-                <p>&copy; 2026 Dixon Rodríguez Cubero. Todos los derechos reservados.</p>
+                <p data-i18n="footer.copyright">&copy; 2026 Dixon Rodríguez Cubero. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
@@ -524,14 +528,19 @@
         style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:-1;"></canvas>
 
     <script src="js/particulas.js"></script>
-
     <script src="js/cursor-effect.js"></script>
-
     <script src="js/theme-toggle.js"></script>
+    
+    <!-- Archivos de traducción -->
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
 
     <script>
         // Configuración de partículas animadas
         document.addEventListener('DOMContentLoaded', function () {
+            // Inicializar el idioma
+            updateContent();
+            
             // Crear partículas para el fondo general
             const particlesBg = document.getElementById('particles-bg');
 
@@ -602,7 +611,9 @@
 
             // Event listeners
             window.addEventListener('scroll', toggleBackToTopButton);
-            backToTopBtn.addEventListener('click', scrollToTop);
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', scrollToTop);
+            }
 
             // Ejecutar al cargar la página
             toggleBackToTopButton();
@@ -675,19 +686,19 @@
                     const message = document.getElementById('message').value.trim();
 
                     if (!name || !email || !message) {
-                        showAlert('Por favor, completa todos los campos.', 'warning');
+                        showAlert(translate('alert.validation.empty'), 'warning');
                         return;
                     }
 
                     // Valida email
                     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                     if (!emailRegex.test(email)) {
-                        showAlert('Por favor, ingresa un email válido.', 'warning');
+                        showAlert(translate('alert.validation.email'), 'warning');
                         return;
                     }
 
                     // Cambia el texto del botón
-                    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span> Enviando...';
+                    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span> ' + translate('contact.form.button') + '...';
                     submitBtn.disabled = true;
 
                     // Prepara los datos para el template
@@ -712,7 +723,7 @@
                             console.log('Email enviado con éxito!', response.status, response.text);
 
                             // Muestra mensaje de éxito
-                            showAlert('¡Mensaje enviado con éxito! Te contactaré pronto.', 'success');
+                            showAlert(translate('alert.success'), 'success');
 
                             // Resetea el formulario
                             contactForm.reset();
@@ -720,7 +731,7 @@
                             console.log('Error al enviar email:', error);
 
                             // Muestra mensaje de error
-                            showAlert('Hubo un error al enviar el mensaje. Por favor, intenta nuevamente o contáctame directamente a: andreyrc28.cr@gmail.com', 'danger');
+                            showAlert(translate('alert.error'), 'danger');
                         })
                         .finally(function () {
                             // Restaura el botón
@@ -747,9 +758,9 @@
 
                         // Cerrar navbar en móvil
                         const navbarCollapse = document.querySelector('.navbar-collapse');
-                        if (navbarCollapse.classList.contains('show')) {
+                        if (navbarCollapse && navbarCollapse.classList.contains('show')) {
                             const navbarToggler = document.querySelector('.navbar-toggler');
-                            navbarToggler.click();
+                            if (navbarToggler) navbarToggler.click();
                         }
                     }
                 });
@@ -801,14 +812,20 @@
         transition: transform 0.3s ease-out;
     `;
 
+            // Obtener título según tipo
+            let title = '';
+            switch(type) {
+                case 'success': title = translate('alert.success.title') || '¡Éxito!'; break;
+                case 'danger': title = translate('alert.error.title') || 'Error'; break;
+                case 'warning': title = translate('alert.validation.title') || 'Advertencia'; break;
+                default: title = 'Información';
+            }
+
             alertDiv.innerHTML = `
         <div class="d-flex align-items-start">
             <i class="bi ${typeIcons[type]} me-3" style="color: ${typeColors[type]}; font-size: 1.25rem; margin-top: 2px;"></i>
             <div class="flex-grow-1">
-                <div class="mb-1" style="font-weight: 600; color: ${typeColors[type]}">${type === 'success' ? '¡Éxito!' :
-                    type === 'danger' ? 'Error' :
-                        type === 'warning' ? 'Advertencia' : 'Información'
-                }</div>
+                <div class="mb-1" style="font-weight: 600; color: ${typeColors[type]}">${title}</div>
                 <div style="font-size: 0.9rem;">${message}</div>
             </div>
             <button type="button" class="btn-close btn-close-white ms-2" style="filter: brightness(0) invert(1);"></button>
